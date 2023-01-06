@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skeleton example</title>
+    <style>
+      @keyframes skeleton {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+
+      .skeleton {
+        margin-top: 20px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          90deg,
+          #f2f2f2 25%,
+          #e6e6e6 37%,
+          #f2f2f2 63%
+        );
+        background-size: 400% 100%;
+        animation: skeleton 1.5s ease infinite;
+      }
+      .skeleton > svg {
+        width: 20%;
+        height: 20%;
+        fill: #dcdde0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="skeleton">
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M64 896V128h896v768H64z m64-128l192-192 116.352 116.352L640 448l256 307.2V192H128v576z m224-480a96 96 0 1 1-0.064 192.064A96 96 0 0 1 352 288z"
+        ></path>
+      </svg>
+    </div>
+  </body>
+</html>
