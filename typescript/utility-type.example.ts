@@ -62,3 +62,19 @@ interface Person {
 }
 // Required
 type RequiredPersonInfo = Required<Person>;
+
+// multiple generics usage
+type MultipleGenericsParams<FirstGenericsParam = number, SecondGenericsParam = string> = {
+  f: FirstGenericsParam,
+  s: SecondGenericsParam
+}
+
+const m1: MultipleGenericsParams = {
+  f: 1,
+  s: 's'
+}
+
+const m2: MultipleGenericsParams<boolean, string[]> = {
+  f: false,
+  s: []
+}
